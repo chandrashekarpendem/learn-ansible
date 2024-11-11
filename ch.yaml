@@ -101,12 +101,12 @@
       ansible.builtin.debug:
         msg: welcome to the {{city2}}
 
-- name: declare and access a variable at vars file level
+- name: declare and access a variable at inv file level
   hosts: all
   become: yes
   connection: local
   tasks:
-    - name: declare and access a variable at vars file level
+    - name: declare and access a variable at inv file level
       ansible.builtin.debug:
         msg: welcome to the {{city3}}
 
