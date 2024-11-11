@@ -1,0 +1,8 @@
+---
+- name: nginx
+  hosts: all
+  become: yes
+  tasks:
+    - name: print nginx
+      ansible.builtin.debug:
+        msg: welcome to india
