@@ -1,43 +1,43 @@
 ---
 #variable at play level
-- name: nginx
+- name: Declare and access variable at play level
   hosts: all
   become: yes
   vars:
     name: chandra
   tasks:
-    - name: print nginx
+    - name: Declare and access variable at play level
       ansible.builtin.debug:
         msg: welcome to {{chandra}}
 
 
 #variable at task level
-- name: nginx
+- name: Declare and access variable at task level
   hosts: all
   become: yes
   tasks:
-    - name: print nginx
+    - name: Declare and access variable at play level
       ansible.builtin.debug:
         msg: welcome to {{chandra}}
       vars:
         name: chandra
 
 #variable at inventry file  level
-- name: nginx
+- name: Declare and access variable at inv level
   hosts: all
   become: yes
   tasks:
-    - name: print nginx
+    - name: Declare and access variable at inv level
       ansible.builtin.debug:
-        msg: welcome to {{chandra}}
+        msg: welcome to {{URL}}
 
 #variable at play level
-- name: declare and access variable at another file and access file
+- name: declare and access variable at another file
   hosts: all
   become: yes
   vars_files:
     - chandra.yaml
   tasks:
-    - name: print nginx
+    - name: declare and access variable at another file
       ansible.builtin.debug:
         msg: welcome to {{chandra}}
