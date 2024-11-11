@@ -8,7 +8,7 @@
   tasks:
     - name: Declare and access variable at play level
       ansible.builtin.debug:
-        msg: welcome to {{chandra}}
+        msg: welcome to {{name}}
 
 
 #variable at task level
@@ -18,9 +18,9 @@
   tasks:
     - name: Declare and access variable at play level
       ansible.builtin.debug:
-        msg: welcome to {{chandra}}
+        msg: welcome to {{name1}}
       vars:
-        name: chandra
+        name1: yoyo
 
 #variable at inventry file  level
 - name: Declare and access variable at inv level
@@ -31,7 +31,7 @@
       ansible.builtin.debug:
         msg: welcome to {{URL}}
 
-#variable at play level
+#variable at another level
 - name: declare and access variable at another file
   hosts: all
   become: yes
