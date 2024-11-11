@@ -118,5 +118,6 @@
   tasks:
     - name: declare and access a variable at pre-defined variables
       ansible.builtin.debug:
-        - msg: welcome to the {{ansible_fqdn}}
-        - msg: {{ansible_check_mode}}
+       msg: welcome to the {{ansible_fqdn}}
+      ansible_builtin_debug:
+       msg: {{ansible_check_mode}}
