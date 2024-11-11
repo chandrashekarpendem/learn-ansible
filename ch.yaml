@@ -75,7 +75,7 @@
   become: yes
   connection: local
   vars:
-    city:hyderabad
+    city: hyderabad
   tasks:
     - name: Declare and access a variable at play level
       ansible.builtin.debug:
@@ -90,7 +90,7 @@
       ansible.builtin.debug:
         msg: welcome to the {{city1}}
       vars:
-        city1:chennai
+        city1: chennai
 
 - name: declare and access a variable at command level
   hosts: all
