@@ -41,3 +41,72 @@
     - name: declare and access variable at another file
       ansible.builtin.debug:
         msg: welcome to {{chandra}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Declare and access a variable at play level
+
+- name: Declare and access a variable at play level
+  hosts: all
+  become: yes
+  connection: local
+  vars:
+    city=hyderabad
+  tasks:
+    - name: Declare and access a variable at play level
+      ansible.builtin.debug:
+        msg: welcome to world of {{city}}
+
+- name: declare and access a variable at task level
+  hosts: all
+  become: yes
+  connection: local
+  tasks:
+    - name: declare and access a variable at task level
+      ansible.builtin.debug:
+        msg: welcome to the {{city1}}
+      vars:
+        city1=chennai
+
+- name: declare and access a variable at command level
+  hosts: all
+  become: yes
+  connection: local
+  tasks:
+    - name: declare and access a variable at task level
+      ansible.builtin.debug:
+        msg: welcome to the {{city2}}
+
+- name: declare and access a variable at vars file level
+  hosts: all
+  become: yes
+  connection: local
+  tasks:
+    - name: declare and access a variable at varsfile level
+      ansible.builtin.debug:
+        msg: welcome to the {{city3}}
+
