@@ -118,7 +118,8 @@
   tasks:
     - name: declare and access a variable at pre-defined variables
       ansible.builtin.debug:
-        - msg: hostname=={{ansible_architecture}}
-        - msg: hostname=={{ansible_fqdn}}
+          msg:
+           -  "hostname=={{ansible_architecture}}"
+           -  "hostname=={{ansible_fqdn}}"
 
 
