@@ -4,11 +4,11 @@
   hosts: all
   become: yes
   vars:
-    name: chandra
+    name2: chandra
   tasks:
     - name: Declare and access variable at play level
       ansible.builtin.debug:
-        msg: welcome to {{name}}
+        msg: welcome to {{name2}}
 
 
 #variable at task level
