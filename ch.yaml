@@ -118,6 +118,6 @@
   tasks:
     - name: declare and access a variable at pre-defined variables
       ansible.builtin.debug:
-        msg: {{ansible_architecture}}
+        msg: {{ansible_fqdn}}
 
 
