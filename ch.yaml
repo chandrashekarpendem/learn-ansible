@@ -106,7 +106,7 @@
   become: yes
   connection: local
   tasks:
-    - name: declare and access a variable at varsfile level
+    - name: declare and access a variable at vars file level
       ansible.builtin.debug:
         msg: welcome to the {{city3}}
 
