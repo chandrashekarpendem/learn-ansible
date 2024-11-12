@@ -1,15 +1,6 @@
----
-- name: register a variable and store
+- name: print the message
   hosts: all
-  become: yes
   connection: local
-  tasks:
-    - name: register variable
-      ansible.builtin.shell: uptime
-      register: out
-    - name: store out variable
-      ansible.builtin.debug:
-        msg: "{{out}}"
-    - name: set a fact
-      ansible.builtin.set_fact:
-        chandra: "{{out.stdout}}"
+  become: yes
+  roles:
+    - demo

@@ -1,0 +1,3 @@
+- name: just print the words
+  ansible.builtin.debug:
+    msg: welcome to world
