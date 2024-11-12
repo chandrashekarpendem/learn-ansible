@@ -10,3 +10,6 @@
     - name: store out variable
       ansible.builtin.debug:
         msg: "{{out}}"
+    - name: set a fact
+      ansible.builtin.set_fact:
+        chandra: "{{out.stdout}}"
