@@ -3,7 +3,7 @@
   connection: local
   become: yes
   tasks:
-    - name: hello from conditon
+    - name: hello from condition
       ansible.builtin.debug:
         msg: hello condition
       when: chandra == "true"
