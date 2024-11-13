@@ -1,0 +1,9 @@
+- name: demon on conditions
+  hosts: all
+  connection: local
+  become: yes
+  tasks:
+    - name: hello from conditon
+      ansible.builtin.debug:
+        msg: hello condition
+      when: "{{chandra==true}}"
