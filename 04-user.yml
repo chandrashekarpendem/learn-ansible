@@ -4,13 +4,13 @@
   connection: local
   become: true
   vars:
-    username: "pcs"  # Replace with the desired username
+    username: pcs  # Replace with the desired username
     user_password: "$6$4985SVjdhy4M3wxO$eDTXWTdBPOiVzySIQjZuvbIv7.nX2.2qL6qeO29t32Er7OS2J38g0mHvyi9UrBG7SgeSjhTpL6iQpZoWuI95e/"  # Replace with the encrypted password from Python
 
   tasks:
     - name: Ensure the user exists
       ansible.builtin.user:
-        name: "{{ pcs }}"
+        name: pcs
         password: "{{ $6$4985SVjdhy4M3wxO$eDTXWTdBPOiVzySIQjZuvbIv7.nX2.2qL6qeO29t32Er7OS2J38g0mHvyi9UrBG7SgeSjhTpL6iQpZoWuI95e/ }}"
         shell: /bin/bash
         state: present
