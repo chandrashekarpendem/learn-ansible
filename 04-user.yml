@@ -18,5 +18,5 @@
 
     - name: Print user creation status
       debug:
-        msg: "User {{ username }} has been created with the specified password."
+        msg: "User pcs has been created with the specified password."
       when: user_creation.changed
