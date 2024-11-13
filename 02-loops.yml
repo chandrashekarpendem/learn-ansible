@@ -11,7 +11,7 @@
         - loop2
     - name: demo on loop2
       ansible.builtin.debug:
-        msg: fruit name is  {{item.name}} & {{item.quality}}
+        msg: fruit name is  {{item.name}} & quality is {{item.quality}}
       loop:
         - { name: apple, quality: A }
         - { name: banana, quality: B }
