@@ -1,0 +1,6 @@
+- name: declare and access a variables at all levels
+  hosts: all
+  connection: local
+  become: yes
+  tasks:
+    - name: declare a variable at a task level and access

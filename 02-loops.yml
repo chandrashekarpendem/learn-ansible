@@ -1,0 +1,12 @@
+- name: declare and access a variables at all levels
+  hosts: all
+  connection: local
+  become: yes
+  tasks:
+    - name: demo on the loops
+      ansible.builtin.debug:
+        msg: hello world from loops {{ item }}
+      loops:
+        - loop1
+        - loop2
+
