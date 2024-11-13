@@ -6,7 +6,7 @@
     - name: demo on the loops
       ansible.builtin.debug:
         msg: hello world from loops {{ item }}
-      loops:
+      loop:
         - loop1
         - loop2
 
