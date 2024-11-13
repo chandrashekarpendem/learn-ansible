@@ -6,4 +6,4 @@
     - name: hello from conditon
       ansible.builtin.debug:
         msg: hello condition
-      when: "{{chandra==true}}"
+      when: chandra == "true"
