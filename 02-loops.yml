@@ -1,9 +1,9 @@
-- name: declare and access a variables at all levels
+- name: demo on loops
   hosts: all
   connection: local
   become: yes
   tasks:
-    - name: demo on the loops
+    - name: demo on the loop
       ansible.builtin.debug:
         msg: hello world from loops {{ item }}
       loop:
@@ -15,5 +15,13 @@
       loop:
         - { name: apple, quality: A }
         - { name: banana, quality: B }
+    - name: add several users
+      ansible.builtin.user:
+        name: "{{ item }}"
+        groups: "wheel"
+        state: present
+      with_items:
+        - chandra
+        - shekar
 
 
